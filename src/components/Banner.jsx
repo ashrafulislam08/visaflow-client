@@ -25,14 +25,46 @@ export default function Banner() {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
             }}
-            className="h-screen w-full rounded-md"
+            className="h-screen w-full rounded-md flex items-center justify-center"
           >
-            <h2>WIthout hassle </h2>
+            <div className="text-center text-black">
+              <h2 className="text-5xl">Without hassle</h2>
+              <p className="text-xl">Now processing for visa is easy.</p>
+            </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>
+          <div
+            style={{
+              backgroundImage:
+                "url(https://images.pexels.com/photos/7009468/pexels-photo-7009468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+            className="h-screen w-full rounded-md flex items-center justify-center"
+          >
+            <div className="text-center text-black">
+              <h2 className="text-5xl">Without hassle</h2>
+              <p className="text-xl">Now processing for visa is easy.</p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            style={{
+              backgroundImage:
+                "url(https://images.pexels.com/photos/7009468/pexels-photo-7009468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+            className="h-screen w-full rounded-md flex items-center justify-center"
+          >
+            <div className="text-center text-black">
+              <h2 className="text-5xl">Without hassle</h2>
+              <p className="text-xl">Now processing for visa is easy.</p>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </>
   );
