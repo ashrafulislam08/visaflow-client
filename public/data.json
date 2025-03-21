@@ -1,0 +1,282 @@
+[
+    {
+      "country_image": "https://flagsapi.com/US/shiny/64.png",
+      "country_name": "united states",
+      "visa_type": "tourist visa",
+      "processing_time": "3-5 weeks",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "recent passport-sized photograph",
+        "proof of financial means",
+        "travel itinerary",
+        "proof of accommodation"
+      ],
+      "description": "a visa required for short-term travel to the u.s. for tourism, visiting friends, or leisure activities.",
+      "age_restriction": "no restriction",
+      "fee": 160,
+      "validity": "6 months",
+      "application_method": "online and in-person interview",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/AU/shiny/64.png",
+      "country_name": "united kingdom",
+      "visa_type": "visitor visa",
+      "processing_time": "3 weeks",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "recent passport-sized photograph",
+        "bank statements",
+        "travel plan",
+        "accommodation proof"
+      ],
+      "description": "a visa allowing travelers to visit the uk for tourism, business, or short-term study.",
+      "age_restriction": "no restriction",
+      "fee": 100,
+      "validity": "6 months",
+      "application_method": "online application",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/CA/shiny/64.png",
+      "country_name": "canada",
+      "visa_type": "visitor visa",
+      "processing_time": "4 weeks",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "photographs",
+        "financial proof",
+        "travel history",
+        "purpose of visit"
+      ],
+      "description": "a visa required for foreign nationals visiting canada for tourism or family visits.",
+      "age_restriction": "no restriction",
+      "fee": 100,
+      "validity": "6 months",
+      "application_method": "online or paper application",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://example.com/images/australia.jpg",
+      "country_name": "australia",
+      "visa_type": "visitor visa",
+      "processing_time": "2-4 weeks",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "photographs",
+        "financial statements",
+        "health insurance",
+        "proof of stay"
+      ],
+      "description": "a short-term visa for individuals visiting australia for leisure or business.",
+      "age_restriction": "no restriction",
+      "fee": 150,
+      "validity": "3, 6, or 12 months",
+      "application_method": "online application",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/DE/shiny/64.png",
+      "country_name": "germany",
+      "visa_type": "schengen visa",
+      "processing_time": "2-3 weeks",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "two passport-size photographs",
+        "travel itinerary",
+        "travel insurance",
+        "bank statements"
+      ],
+      "description": "a visa for visiting germany and other schengen countries for short stays.",
+      "age_restriction": "no restriction",
+      "fee": 80,
+      "validity": "90 days",
+      "application_method": "embassy or consulate",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://example.com/images/france.jpg",
+      "country_name": "france",
+      "visa_type": "schengen visa",
+      "processing_time": "3 weeks",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "travel itinerary",
+        "financial proof",
+        "health insurance",
+        "accommodation details"
+      ],
+      "description": "a short-term visa for traveling to france and the schengen region.",
+      "age_restriction": "no restriction",
+      "fee": 80,
+      "validity": "90 days",
+      "application_method": "online or at embassy",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/JP/shiny/64.png",
+      "country_name": "japan",
+      "visa_type": "tourist visa",
+      "processing_time": "5-10 days",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "passport-size photo",
+        "bank statements",
+        "flight itinerary",
+        "hotel reservation"
+      ],
+      "description": "a visa required for short-term visits to japan for tourism purposes.",
+      "age_restriction": "no restriction",
+      "fee": 3000,
+      "validity": "90 days",
+      "application_method": "embassy or consulate",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/TW/shiny/64.png",
+      "country_name": "china",
+      "visa_type": "tourist visa (l visa)",
+      "processing_time": "4-7 days",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "recent passport photo",
+        "travel itinerary",
+        "invitation letter (if applicable)",
+        "hotel booking"
+      ],
+      "description": "a visa required for foreign nationals visiting china for tourism.",
+      "age_restriction": "no restriction",
+      "fee": 140,
+      "validity": "30-90 days",
+      "application_method": "embassy or visa center",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/IT/shiny/64.png",
+      "country_name": "italy",
+      "visa_type": "schengen visa",
+      "processing_time": "2-4 weeks",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "passport photos",
+        "proof of financial means",
+        "accommodation booking",
+        "travel insurance"
+      ],
+      "description": "a visa for short-term visits to italy and other schengen countries.",
+      "age_restriction": "no restriction",
+      "fee": 80,
+      "validity": "90 days",
+      "application_method": "embassy or consulate",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/BR/shiny/64.png",
+      "country_name": "brazil",
+      "visa_type": "tourist visa",
+      "processing_time": "5-10 days",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "passport-size photos",
+        "flight reservation",
+        "bank statements",
+        "hotel booking"
+      ],
+      "description": "a visa required for short-term visits to brazil for tourism.",
+      "age_restriction": "no restriction",
+      "fee": 80,
+      "validity": "90 days",
+      "application_method": "embassy or consulate",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/KR/shiny/64.png",
+      "country_name": "south korea",
+      "visa_type": "tourist visa",
+      "processing_time": "5-7 days",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "passport-size photo",
+        "bank statement",
+        "travel itinerary"
+      ],
+      "description": "a visa for visiting south korea for tourism purposes.",
+      "age_restriction": "no restriction",
+      "fee": 50,
+      "validity": "90 days",
+      "application_method": "online and in-person interview",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/MX/shiny/64.png",
+      "country_name": "mexico",
+      "visa_type": "tourist visa",
+      "processing_time": "7-10 days",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "passport photo",
+        "financial proof",
+        "travel itinerary",
+        "hotel booking"
+      ],
+      "description": "a visa for short-term visits to mexico for tourism.",
+      "age_restriction": "no restriction",
+      "fee": 70,
+      "validity": "180 days",
+      "application_method": "embassy or visa center",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/RU/shiny/64.png",
+      "country_name": "russia",
+      "visa_type": "tourist visa",
+      "processing_time": "10-15 days",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "passport photo",
+        "invitation letter",
+        "travel itinerary",
+        "travel insurance"
+      ],
+      "description": "a visa for visiting russia for tourism and cultural exchange.",
+      "age_restriction": "no restriction",
+      "fee": 90,
+      "validity": "30 days",
+      "application_method": "embassy or consulate",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    },
+    {
+      "country_image": "https://flagsapi.com/NZ/shiny/64.png",
+      "country_name": "new zealand",
+      "visa_type": "visitor visa",
+      "processing_time": "4-6 weeks",
+      "required_documents": [
+        "valid passport",
+        "visa application form",
+        "photograph",
+        "proof of funds",
+        "travel itinerary",
+        "health insurance"
+      ],
+      "description": "a visa for visiting new zealand for tourism or business purposes.",
+      "age_restriction": "no restriction",
+      "fee": 200,
+      "validity": "3 months",
+      "application_method": "online application",
+      "user_email": "ashrafulislam.dev1@gmail.com"
+    }
+  ]
+  
