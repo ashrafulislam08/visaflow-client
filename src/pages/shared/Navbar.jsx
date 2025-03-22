@@ -1,8 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuthContext";
 
 const Navbar = () => {
-  const { user } = useAuthContext();
+  const { user, logOut } = useAuthContext();
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
+  };
   const links = (
     <>
       <li>
@@ -34,7 +42,12 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
           {user ? (
-            <button className="btn btn-accent text-white">Log Out</button>
+            <button
+              className="btn btn-accent text-white"
+              onClick={handleLogOut}
+            >
+              Log Out
+            </button>
           ) : (
             <Link to="/login">
               <button className="btn btn-neutral">Login</button>
