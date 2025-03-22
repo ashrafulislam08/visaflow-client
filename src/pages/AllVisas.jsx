@@ -16,7 +16,7 @@ const AllVisas = () => {
           All Available Visas
         </h2>
       </div>
-      <div className="grid lg:grid-cols-4 gap-3 mt-3">
+      <div className="grid lg:grid-cols-4 gap-3 mt-5">
         {visas.map((visa) => (
           <VisaCard visa={visa} />
         ))}
