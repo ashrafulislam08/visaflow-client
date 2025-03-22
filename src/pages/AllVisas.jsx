@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import VisaCard from "./VisaCard";
+import VisaCard from "../components/VisaCard";
 
-const LatestVisas = () => {
+const AllVisas = () => {
   const [visas, setVisas] = useState([]);
 
   useEffect(() => {
@@ -9,14 +9,15 @@ const LatestVisas = () => {
       .then((res) => res.json())
       .then((data) => setVisas(data));
   }, []);
-
   return (
     <div>
       <div>
-        <h2 className="text-3xl font-bold text-center">Latest News</h2>
+        <h2 className="text-4xl my-5 font-semibold text-center">
+          All Available Visas
+        </h2>
       </div>
       <div className="grid lg:grid-cols-4 gap-3 mt-3">
-        {visas.slice(0, 6).map((visa) => (
+        {visas.map((visa) => (
           <VisaCard visa={visa} />
         ))}
       </div>
@@ -24,4 +25,4 @@ const LatestVisas = () => {
   );
 };
 
-export default LatestVisas;
+export default AllVisas;

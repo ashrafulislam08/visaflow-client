@@ -9,8 +9,8 @@ const VisaCard = ({ visa }) => {
   } = visa;
   return (
     <div className="card bg-base-100 shadow-sm">
-      <figure>
-        <img src={country_image} alt="Shoes" />
+      <figure className="">
+        <img className="ml-0" src={country_image} alt="" />
       </figure>
       <div className="card-body">
         <h2 className="card-title uppercase">{country_name}</h2>
