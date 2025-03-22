@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuthContext";
 
 const Navbar = () => {
-  // const { user } = useAuthContext();
+  const { user } = useAuthContext();
   const links = (
     <>
       <li>
@@ -33,9 +33,13 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
-          <Link to="/login">
-            <button className="btn btn-neutral">Login</button>
-          </Link>
+          {user ? (
+            <button className="btn btn-accent text-white">Log Out</button>
+          ) : (
+            <Link to="/login">
+              <button className="btn btn-neutral">Login</button>
+            </Link>
+          )}
         </div>
       </div>
       <div className="dropdown">
