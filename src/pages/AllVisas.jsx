@@ -1,14 +1,22 @@
 import { useEffect, useState } from "react";
 import VisaCard from "../components/VisaCard";
+import useAxios from "../hooks/useAxios";
 
 const AllVisas = () => {
   const [visas, setVisas] = useState([]);
 
+  const axios = useAxios();
   useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((data) => setVisas(data));
+    axios
+      .get("/visas")
+      .then((data) => {
+        setVisas(data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
+
   return (
     <div>
       <div>
