@@ -1,9 +1,23 @@
 import { useForm } from "react-hook-form";
+import useAxios from "../hooks/useAxios";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const AddVisa = () => {
   const { handleSubmit, register } = useForm();
+  const axios = useAxios();
+  const navigate = useNavigate();
   const onSubmit = (data) => {
-    console.log(data);
+    const newVisa = data;
+    axios
+      .post("/visas", newVisa)
+      .then((result) => {
+        toast.success("Successfully added a visa");
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
   };
   return (
     <div className="my-8">
