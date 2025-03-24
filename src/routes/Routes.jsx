@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import AllVisas from "../pages/AllVisas";
 import AddVisa from "../pages/AddVisa";
 import PrivateRoute from "./PrivateRoute";
+import VisaDetails from "../pages/VisaDetails";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddVisa />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/visa/:id",
+        element: (
+          <PrivateRoute>
+            <VisaDetails />
           </PrivateRoute>
         ),
       },

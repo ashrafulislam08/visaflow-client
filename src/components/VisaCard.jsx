@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const VisaCard = ({ visa }) => {
   const {
     country_image,
@@ -6,6 +8,7 @@ const VisaCard = ({ visa }) => {
     processing_time,
     fee,
     validity,
+    _id,
   } = visa;
   return (
     <div className="card bg-base-100 shadow-sm">
@@ -19,7 +22,9 @@ const VisaCard = ({ visa }) => {
         <p className="badge badge-primary">${fee}</p>
         <p>{validity}</p>
         <div className="card-actions">
-          <button className="btn btn-neutral">See Details</button>
+          <Link to={`/visa/${_id}`}>
+            <button className="btn btn-neutral">See Details</button>
+          </Link>
         </div>
       </div>
     </div>
