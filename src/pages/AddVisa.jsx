@@ -2,13 +2,15 @@ import { useForm } from "react-hook-form";
 import useAxios from "../hooks/useAxios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import useAuthContext from "../hooks/useAuthContext";
 
 const AddVisa = () => {
   const { handleSubmit, register } = useForm();
   const axios = useAxios();
   const navigate = useNavigate();
+  const { user } = useAuthContext();
   const onSubmit = (data) => {
-    const newVisa = data;
+    const newVisa = { ...data, user_email: user?.email };
     axios
       .post("/visas", newVisa)
       .then((result) => {
