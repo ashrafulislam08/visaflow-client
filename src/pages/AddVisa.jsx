@@ -1,11 +1,14 @@
+import { useForm } from "react-hook-form";
+
 const AddVisa = () => {
-  const handleAddVisa = (e) => {
-    e.preventDefault();
+  const { handleSubmit, register } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
   };
   return (
     <div className="my-8">
       <div>
-        <form onSubmit={handleAddVisa}>
+        <section>
           <section class=" dark:bg-gray-900">
             <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
               <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -13,18 +16,19 @@ const AddVisa = () => {
                   <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
                     Add Visa
                   </h1>
-                  <form class="space-y-4 md:space-y-6" action="#">
+                  <form
+                    onSubmit={handleSubmit(onSubmit)}
+                    className="space-y-4 md:space-y-6"
+                  >
                     <div className="flex gap-3 flex-col md:flex-row">
                       <div>
-                        <label
-                          for=""
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                           Country Image
                         </label>
                         <input
                           type="text"
                           name="country_image"
+                          {...register("country_image")}
                           class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Country Image"
                           required=""
@@ -33,7 +37,7 @@ const AddVisa = () => {
                       <div>
                         <label
                           for=""
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Country Name
                         </label>
@@ -42,6 +46,7 @@ const AddVisa = () => {
                           name="country_name"
                           class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Country Name"
+                          {...register("country_name")}
                           required=""
                         />
                       </div>
@@ -58,7 +63,8 @@ const AddVisa = () => {
                           type="text"
                           name="country_name"
                           class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          placeholder="Country Name"
+                          placeholder="Visa Type"
+                          {...register("visa_type")}
                           required=""
                         />
                       </div>
@@ -74,16 +80,14 @@ const AddVisa = () => {
                           name="processing_time"
                           class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Processing Time"
+                          {...register("processing_time")}
                           required=""
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label
-                        for=""
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
+                      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Description
                       </label>
                       <textarea
@@ -91,39 +95,36 @@ const AddVisa = () => {
                         name="description"
                         class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Description"
+                        {...register("description")}
                         required=""
                       />
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-3">
                       <div>
-                        <label
-                          for=""
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                           Age Restriction
                         </label>
                         <input
                           type="text"
                           name="age_restriction"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Age Restriction"
+                          {...register("age_restriction")}
                           required=""
                         />
                       </div>
 
                       <div>
-                        <label
-                          for=""
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                           Fee
                         </label>
                         <input
                           type="number"
                           name="fee"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Fee"
+                          {...register("fee")}
                           required=""
                         />
                       </div>
@@ -131,32 +132,28 @@ const AddVisa = () => {
 
                     <div className="flex flex-col md:flex-row gap-3">
                       <div>
-                        <label
-                          for=""
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                           Validity
                         </label>
                         <input
                           type="text"
                           name="validity"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Validity"
+                          {...register("validity")}
                           required=""
                         />
                       </div>
                       <div>
-                        <label
-                          for=""
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                           Application Method
                         </label>
                         <input
                           type="text"
                           name="application_method"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Application Method"
+                          {...register("application_method")}
                           required=""
                         />
                       </div>
@@ -173,7 +170,7 @@ const AddVisa = () => {
               </div>
             </div>
           </section>
-        </form>
+        </section>
       </div>
     </div>
   );
