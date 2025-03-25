@@ -3,10 +3,11 @@ import useAxios from "../hooks/useAxios";
 import { useEffect, useState } from "react";
 import useAuthContext from "../hooks/useAuthContext";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const VisaDetails = () => {
   const [visa, setVisa] = useState({});
-  const { register } = useForm();
+  const { register, handleSubmit } = useForm();
   const { user } = useAuthContext();
   const axios = useAxios();
   const { id } = useParams();
@@ -16,7 +17,31 @@ const VisaDetails = () => {
     });
   }, [id]);
 
-  console.log(visa);
+  const onSubmit = (data) => {
+    const newApplication = {
+      ...data,
+      fee: visa.fee,
+      country: visa.country_name,
+      country_image: visa.country_image,
+      visa_type: visa.visa_type,
+      processing_time: visa.processing_time,
+      validity: visa.validity,
+      application_method: visa.application_method,
+      applied_data: new Date(),
+    };
+
+    console.log(newApplication);
+
+    axios
+      .post("/apply", newApplication)
+      .then((data) => {
+        console.log(data);
+        document.getElementById("my_modal_3").close();
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   return (
     <div>
       <div>
@@ -54,7 +79,7 @@ const VisaDetails = () => {
               ✕
             </button>
           </form>
-          <form className="space-y-2">
+          <form className="space-y-2" onSubmit={handleSubmit(onSubmit)}>
             <div>
               <input
                 type="text"
@@ -78,6 +103,7 @@ const VisaDetails = () => {
               <input
                 type="text"
                 {...register("last_name")}
+                name="last_name"
                 className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Last Name"
                 required=""
@@ -88,7 +114,7 @@ const VisaDetails = () => {
                 type="text"
                 {...register("fee")}
                 className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder={`$${visa.fee}`}
+                defaultValue={visa.fee}
                 disabled
                 required=""
               />
