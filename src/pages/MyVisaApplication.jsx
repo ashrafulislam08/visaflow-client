@@ -12,6 +12,11 @@ const MyVisaApplication = () => {
   console.log(data);
   return (
     <>
+      <div>
+        <h2 className="text-3xl font-semibold text-center my-8">
+          My Visa Application
+        </h2>
+      </div>
       <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
         {data?.length > 0 ? (
           <>
@@ -28,6 +33,8 @@ const MyVisaApplication = () => {
                   <th>Validity</th>
                   <th>Application Method</th>
                   <th>Applied Date</th>
+                  <th>Applicant's Name</th>
+                  <td></td>
                 </tr>
               </thead>
               <tbody>
@@ -44,6 +51,12 @@ const MyVisaApplication = () => {
                       <td>{visa.validity}</td>
                       <td>{visa.application_method}</td>
                       <td>{visa.applied_data}</td>
+                      <td>{visa.first_name + " " + visa.last_name}</td>
+                      <td>
+                        <button className="btn btn-error text-white">
+                          Cancel
+                        </button>
+                      </td>
                     </tr>
                   </>
                 ))}
