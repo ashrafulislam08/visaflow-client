@@ -9,7 +9,19 @@ const MyVisaApplication = () => {
   useEffect(() => {
     axios.get(`/apply/${user.email}`).then((result) => setData(result.data));
   }, []);
-  console.log(data);
+
+  const handleDelete = async (id) => {
+    axios
+      .delete(`/apply/${id}`)
+      .then((result) => {
+        console.log(result);
+        const filteredData = data.filter((visa) => visa._id !== id);
+        setData(filteredData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <>
       <div>
@@ -41,7 +53,7 @@ const MyVisaApplication = () => {
                 {/* row 1 */}
                 {data.map((visa, idx) => (
                   <>
-                    <tr>
+                    <tr key={visa._id}>
                       <th>{idx + 1}</th>
                       <td>{visa.country}</td>
                       <td>{visa.country_name}</td>
@@ -53,7 +65,10 @@ const MyVisaApplication = () => {
                       <td>{visa.applied_data}</td>
                       <td>{visa.first_name + " " + visa.last_name}</td>
                       <td>
-                        <button className="btn btn-error text-white">
+                        <button
+                          onClick={() => handleDelete(visa._id)}
+                          className="btn btn-error text-white"
+                        >
                           Cancel
                         </button>
                       </td>
@@ -64,7 +79,7 @@ const MyVisaApplication = () => {
             </table>
           </>
         ) : (
-          <div>
+          <div className="text-center my-12">
             <h2 className="text-3xl font-semibold">You don't apply for visa</h2>
           </div>
         )}
